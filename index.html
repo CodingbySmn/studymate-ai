@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyMate AI | Study Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="login-page">
+      <div class="login-card">
+        <div class="login-logo">📚</div>
+
+        <h1>StudyMate AI</h1>
+        <p class="login-subtitle">Your personal AI-powered study companion.</p>
+
+        <div class="login-illustration" aria-hidden="true">📖 🎓 ✨</div>
+
+        <h2>Welcome back!</h2>
+        <p class="login-description">
+          Sign in and continue your learning journey.
+        </p>
+
+        <form id="loginForm">
+          <label for="email">University email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          />
+
+          <button type="submit" class="login-button">
+            Login to StudyMate AI →
+          </button>
+
+          <p id="loginMessage" aria-live="polite"></p>
+        </form>
+
+        <p class="login-footer">
+          Learn smarter. Stay organised. Achieve more. 💜
+        </p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD PAGE -->
+    <div id="dashboardPage" hidden>
+      <!-- NAVIGATION -->
+      <header class="navbar">
+        <div class="logo">📚 StudyMate AI</div>
+
+        <div class="nav-message">Your learning journey starts here ✨</div>
+
+        <button id="logoutButton" class="logout-button">Logout ↗</button>
+      </header>
+
+      <main class="dashboard">
+        <!-- PERSONAL WELCOME -->
+        <section class="welcome">
+          <div>
+            <p class="eyebrow">YOUR PERSONAL STUDY SPACE</p>
+
+            <!-- USERNAME APPEARS HERE -->
+            <h1 id="welcomeMessage">Hello, Student! 👋</h1>
+
+            <p>Small steps today, big achievements tomorrow.</p>
+          </div>
+
+          <div class="education-animation" aria-hidden="true">
+            <span class="floating-book">📖</span>
+            <span class="floating-cap">🎓</span>
+            <span class="floating-star">✨</span>
+          </div>
+        </section>
+
+        <!-- TASK STATISTICS -->
+        <section class="stats">
+          <article class="stat-card">
+            <span>📚</span>
+            <h2 id="totalTasks">0</h2>
+            <p>Total tasks</p>
+          </article>
+
+          <article class="stat-card">
+            <span>✅</span>
+            <h2 id="completedTasks">0</h2>
+            <p>Completed</p>
+          </article>
+
+          <article class="stat-card">
+            <span>⏳</span>
+            <h2 id="pendingTasks">0</h2>
+            <p>Still to do</p>
+          </article>
+        </section>
+
+        <!-- STUDY PROGRESS -->
+        <section class="progress-section">
+          <div class="section-heading">
+            <h2>Your study progress</h2>
+            <span id="progressText">0% completed</span>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+
+          <p>Keep going! Every task brings you closer to your goals 🌟</p>
+        </section>
+
+        <!-- STUDY TASKS -->
+        <section class="task-section">
+          <h2>📝 My study tasks</h2>
+
+          <p>Add your tasks and organise your learning.</p>
+
+          <div class="task-input-area">
+            <label for="taskInput"> What do you need to study? </label>
+
+            <div class="input-row">
+              <input
+                type="text"
+                id="taskInput"
+                placeholder="e.g. Revise research methods..."
+              />
+
+              <button id="addButton">+ Add task</button>
+            </div>
+          </div>
+
+          <!-- TASK FILTERS -->
+          <div class="filter-buttons">
+            <button class="filter active" data-filter="all">All tasks</button>
+
+            <button class="filter" data-filter="pending">To do</button>
+
+            <button class="filter" data-filter="completed">Completed</button>
+          </div>
+
+          <!-- TASK LIST -->
+          <ul id="taskList" class="task-list"></ul>
+
+          <p id="emptyMessage" class="empty-message">
+            No tasks here yet. Add your first study task! 📖
+          </p>
+        </section>
+
+        <!-- MOTIVATION -->
+        <section class="motivation">
+          <span>💡</span>
+
+          <div>
+            <h3>A little motivation</h3>
+            <p>Progress is better than perfection. Keep learning!</p>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>Made for learners, powered by possibilities ✨ | StudyMate AI</p>
+      </footer>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
